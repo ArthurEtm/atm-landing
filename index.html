@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arthur The Marketer — Stop Losing Leads to Competitors Who Spend Less Than You</title>
+<meta name="description" content="South Florida local businesses use Arthur The Marketer's 3-part local dominance system to generate 5x more leads at 90% lower cost — often within the first week.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --green:       #023C22;
+  --green-deep:  #011e12;
+  --green-mid:   #035a33;
+  --green-light: #AAE78E;
+  --green-pale:  #e8f5df;
+  --coal:        #272727;
+  --coal-soft:   #3d3d3d;
+  --ghost:       #F9F9F9;
+  --white:       #ffffff;
+  --muted:       #6b7280;
+  --border:      #e2ead8;
+  --cream:       #f3f7ed;
+  --amber:       #b45309;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--ghost);
+  color: var(--coal);
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── UTILITIES ────────────────────────────────────── */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 64px; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.69rem; font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: ''; display: inline-block;
+  width: 22px; height: 1px; flex-shrink: 0;
+}
+.eyebrow-green  { color: var(--green); }
+.eyebrow-green::before  { background: var(--green); }
+.eyebrow-light  { color: var(--green-light); }
+.eyebrow-light::before  { background: var(--green-light); }
+.eyebrow-amber  { color: var(--amber); }
+.eyebrow-amber::before  { background: var(--amber); }
+.eyebrow-center { justify-content: center; }
+
+.section-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.9rem, 3vw, 2.85rem);
+  font-weight: 800; line-height: 1.12;
+  letter-spacing: -0.01em; margin-bottom: 14px;
+}
+.on-dark  { color: var(--white); }
+.on-light { color: var(--coal); }
+
+.body-copy {
+  font-size: 0.98rem; font-weight: 300; line-height: 1.82;
+}
+.body-copy.dark  { color: rgba(255,255,255,0.5); max-width: 580px; }
+.body-copy.light { color: var(--muted); max-width: 580px; }
+
+/* ── BUTTONS ──────────────────────────────────────── */
+.btn {
+  display: inline-block;
+  font-family: 'Inter', sans-serif; font-size: 0.82rem;
+  font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; text-decoration: none;
+  padding: 16px 32px;
+  transition: transform 0.15s, background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap; cursor: pointer; border: none;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-lime   { background: var(--green-light); color: var(--green); }
+.btn-lime:hover { background: #c5f0a4; }
+.btn-forest { background: var(--green); color: var(--white); }
+.btn-forest:hover { background: var(--green-mid); }
+.btn-ghost-white {
+  background: transparent; color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.24);
+}
+.btn-ghost-white:hover { border-color: rgba(255,255,255,0.55); color: var(--white); }
+
+.link-text {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.84rem; font-weight: 400; text-decoration: none;
+  border-bottom: 1px solid; padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s; white-space: nowrap;
+}
+.link-text::after { content: '→'; font-size: 0.78rem; }
+.link-text.dark  { color: var(--muted); border-color: var(--border); }
+.link-text.dark:hover  { color: var(--green); border-color: var(--green); }
+.link-text.light { color: rgba(255,255,255,0.42); border-color: rgba(255,255,255,0.18); }
+.link-text.light:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
+
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+.cta-row.center { justify-content: center; }
+
+.risk-note {
+  font-size: 0.73rem; font-weight: 300; line-height: 1.55; margin-top: 12px;
+}
+.risk-note.dark  { color: rgba(255,255,255,0.28); }
+.risk-note.light { color: var(--muted); }
+
+/* ── TOPBAR ───────────────────────────────────────── */
+.topbar {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--green); padding: 10px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.topbar-msg {
+  font-size: 0.79rem; font-weight: 400;
+  color: rgba(255,255,255,0.62); letter-spacing: 0.02em;
+}
+.topbar-msg strong { color: var(--green-light); font-weight: 600; }
+
+/* ── NAV ──────────────────────────────────────────── */
+.site-nav {
+  position: absolute; top: 50px; left: 0; right: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 64px;
+}
+.logo { display: flex; flex-direction: column; gap: 2px; }
+.logo-mark {
+  font-family: 'Playfair Display', serif; font-size: 2rem;
+  font-weight: 800; color: var(--white); line-height: 1; letter-spacing: -0.01em;
+}
+.logo-sub {
+  font-size: 0.5rem; font-weight: 500;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: rgba(255,255,255,0.32);
+}
+.nav-link {
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.11);
+  color: rgba(255,255,255,0.75); font-size: 0.77rem; font-weight: 500;
+  text-decoration: none; padding: 10px 22px; transition: background 0.2s;
+}
+.nav-link:hover { background: rgba(255,255,255,0.12); }
+
+/* ── HERO ─────────────────────────────────────────── */
+.hero {
+  background: var(--green); min-height: 100vh;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden;
+  padding: 140px 64px 100px;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(170,231,142,0.065) 1px, transparent 1px);
+  background-size: 36px 36px; pointer-events: none;
+}
+.hero-dollar {
+  position: absolute; right: -4%; bottom: -12%;
+  font-family: 'Playfair Display', serif; font-size: 54vw;
+  font-weight: 800; color: rgba(170,231,142,0.028);
+  line-height: 1; pointer-events: none; user-select: none;
+}
+.hero-inner {
+  position: relative; z-index: 2;
+  max-width: 1100px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 58% 1fr;
+  gap: 64px; align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.69rem; font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--green-light); margin-bottom: 22px;
+}
+.hero-eyebrow-line { display: inline-block; width: 26px; height: 1px; background: var(--green-light); }
+
+.hero-h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800; line-height: 1.08;
+  color: var(--white); letter-spacing: -0.015em; margin-bottom: 26px;
+}
+.hero-h1 em { font-style: italic; color: var(--green-light); }
+
+.hero-mechanism {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: rgba(170,231,142,0.1); border: 1px solid rgba(170,231,142,0.2);
+  padding: 10px 18px; margin-bottom: 28px;
+  font-size: 0.82rem; font-weight: 500;
+  color: var(--green-light); letter-spacing: 0.02em;
+}
+.mechanism-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--green-light); flex-shrink: 0;
+  animation: blink 2s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+.hero-promise {
+  font-size: 1.02rem; font-weight: 300;
+  color: rgba(255,255,255,0.56); line-height: 1.8;
+  max-width: 480px; margin-bottom: 40px;
+}
+.hero-proof { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 38px; }
+.proof-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.77rem; font-weight: 400; color: rgba(255,255,255,0.36);
+}
+.proof-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--green-light); flex-shrink: 0; }
+
+/* Hero panel */
+.hero-panel {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(170,231,142,0.11);
+  padding: 38px 34px;
+}
+.panel-label {
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(170,231,142,0.5); margin-bottom: 26px;
+}
+.stat-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: rgba(170,231,142,0.07); margin-bottom: 30px;
+}
+.stat-cell { background: var(--green); padding: 24px 16px; text-align: center; }
+.stat-num {
+  font-family: 'Playfair Display', serif; font-size: 2.2rem;
+  font-weight: 700; color: var(--green-light); line-height: 1; margin-bottom: 6px;
+}
+.stat-desc { font-size: 0.71rem; font-weight: 300; color: rgba(255,255,255,0.38); line-height: 1.45; }
+.panel-quote {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 0.93rem; color: rgba(255,255,255,0.36); line-height: 1.65;
+  border-left: 2px solid rgba(170,231,142,0.25); padding-left: 16px;
+}
+
+/* ── AWARENESS SECTION ────────────────────────────── */
+.awareness-section { background: var(--coal); padding: 100px 0; }
+.awareness-grid {
+  display: grid; grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px; background: rgba(255,255,255,0.04); margin: 52px 0;
+}
+.awareness-card {
+  background: #1f1f1f; padding: 38px 30px;
+  transition: background 0.2s;
+}
+.awareness-card:hover { background: #242424; }
+.awareness-tag {
+  display: inline-block; font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  padding: 4px 10px; margin-bottom: 16px;
+}
+.tag-dim    { background: rgba(255,255,255,0.05); color: rgba(255,255,255,0.22); }
+.tag-active { background: rgba(170,231,142,0.15); color: var(--green-light); }
+.awareness-card-num {
+  font-family: 'Playfair Display', serif; font-size: 2.8rem;
+  font-weight: 800; color: rgba(170,231,142,0.07); line-height: 1; margin-bottom: 4px;
+}
+.awareness-card h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.05rem;
+  font-weight: 700; line-height: 1.3; margin-bottom: 10px;
+}
+.awareness-card p { font-size: 0.87rem; font-weight: 300; line-height: 1.65; }
+.awareness-card.dim h3 { color: rgba(255,255,255,0.5); }
+.awareness-card.dim p  { color: rgba(255,255,255,0.28); }
+.awareness-card.active {
+  background: var(--green); border: 1px solid rgba(170,231,142,0.18);
+}
+.awareness-card.active h3 { color: var(--green-light); }
+.awareness-card.active p  { color: rgba(255,255,255,0.65); }
+
+/* ── MASS DESIRE SECTION ──────────────────────────── */
+.desire-section { background: var(--white); padding: 100px 0; border-bottom: 1px solid var(--border); }
+.desire-inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.desire-visual {
+  background: var(--green); padding: 48px 42px;
+  position: relative; overflow: hidden;
+}
+.desire-visual::after {
+  content: 'Atm'; position: absolute; bottom: -24px; right: -8px;
+  font-family: 'Playfair Display', serif; font-size: 8rem;
+  font-weight: 800; color: rgba(170,231,142,0.055);
+  pointer-events: none; user-select: none;
+}
+.desire-visual-label {
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(170,231,142,0.5); margin-bottom: 30px;
+}
+.desire-item {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 18px 0; border-bottom: 1px solid rgba(170,231,142,0.08);
+}
+.desire-item:last-child { border-bottom: none; }
+.desire-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--green-light); flex-shrink: 0; margin-top: 7px;
+}
+.desire-item strong {
+  display: block; font-size: 0.88rem; font-weight: 600;
+  color: var(--white); margin-bottom: 3px;
+}
+.desire-item span { font-size: 0.8rem; font-weight: 300; color: rgba(255,255,255,0.4); line-height: 1.5; }
+
+.desire-empathy {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 1.1rem; font-weight: 600; color: var(--green);
+  line-height: 1.65; padding: 22px 26px;
+  background: var(--cream); border-left: 3px solid var(--green-light);
+  margin: 18px 0 24px;
+}
+.desire-body {
+  font-size: 0.97rem; font-weight: 300; color: var(--muted);
+  line-height: 1.82; margin-bottom: 36px;
+}
+
+/* ── MECHANISM SECTION ────────────────────────────── */
+.mechanism-section { background: var(--cream); padding: 100px 0; border-bottom: 1px solid var(--border); }
+.mechanism-intro { max-width: 660px; margin-bottom: 52px; }
+.mechanism-badge {
+  display: inline-flex; align-items: center; gap: 12px;
+  background: var(--green); padding: 10px 20px; margin-bottom: 36px;
+  font-size: 0.74rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--green-light);
+}
+.mechanism-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 2px; background: var(--border); margin-bottom: 52px;
+}
+.mechanism-card {
+  background: var(--white); padding: 44px 36px;
+  position: relative; transition: background 0.2s;
+}
+.mechanism-card:hover { background: var(--ghost); }
+.mechanism-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--green-light) 100%);
+  transform: scaleX(0); transform-origin: left; transition: transform 0.32s;
+}
+.mechanism-card:hover::before { transform: scaleX(1); }
+.mechanism-step {
+  font-family: 'Playfair Display', serif; font-size: 3.2rem;
+  font-weight: 800; color: rgba(2,60,34,0.07); line-height: 1; margin-bottom: 4px;
+}
+.mechanism-card h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.12rem;
+  font-weight: 700; color: var(--coal); margin-bottom: 6px;
+}
+.how-label {
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--green); margin-bottom: 12px;
+}
+.mechanism-card p {
+  font-size: 0.87rem; font-weight: 300; color: var(--muted);
+  line-height: 1.68; margin-bottom: 18px;
+}
+.mechanism-result {
+  font-size: 0.78rem; font-weight: 600; color: var(--green);
+  background: var(--green-pale); padding: 8px 14px; display: inline-block;
+}
+
+/* ── PLAN SECTION ─────────────────────────────────── */
+.plan-section { background: var(--white); padding: 100px 0; border-bottom: 1px solid var(--border); }
+.plan-header { text-align: center; margin-bottom: 72px; }
+.plan-header .body-copy { margin: 0 auto; }
+.steps-row {
+  display: grid; grid-template-columns: 1fr 48px 1fr 48px 1fr;
+  align-items: start; margin-bottom: 64px;
+}
+.step-arrow {
+  display: flex; justify-content: center; padding-top: 28px;
+  color: var(--border); font-size: 1.3rem;
+}
+.step { text-align: center; padding: 0 20px; }
+.step-ring {
+  width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--green);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 22px;
+  font-family: 'Playfair Display', serif; font-size: 1.4rem;
+  font-weight: 700; color: var(--green);
+  transition: background 0.25s, color 0.25s;
+}
+.step:hover .step-ring { background: var(--green); color: var(--white); }
+.step h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.1rem;
+  font-weight: 700; color: var(--coal); margin-bottom: 10px;
+}
+.step p { font-size: 0.87rem; font-weight: 300; color: var(--muted); line-height: 1.65; }
+
+/* ── STAKES ───────────────────────────────────────── */
+.stakes-section { background: var(--coal); padding: 100px 0; }
+.stakes-intro { text-align: center; margin-bottom: 64px; }
+.stakes-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px; background: rgba(255,255,255,0.04); margin-bottom: 60px;
+}
+.stakes-col { padding: 48px 44px; }
+.fail-col { background: rgba(255,255,255,0.02); }
+.win-col  { background: var(--green); }
+.stakes-col-title {
+  font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700;
+  padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 6px;
+}
+.fail-col .stakes-col-title { color: rgba(255,255,255,0.27); }
+.win-col  .stakes-col-title { color: var(--green-light); }
+.stakes-sub { font-size: 0.76rem; font-weight: 300; margin-bottom: 26px; }
+.fail-col .stakes-sub { color: rgba(255,255,255,0.18); }
+.win-col  .stakes-sub { color: rgba(255,255,255,0.36); }
+.stakes-list { list-style: none; }
+.stakes-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.89rem; font-weight: 300; line-height: 1.55;
+}
+.stakes-list li:last-child { border-bottom: none; }
+.fail-col li { color: rgba(255,255,255,0.3); }
+.win-col  li { color: rgba(255,255,255,0.78); }
+.si { flex-shrink: 0; margin-top: 2px; font-size: 0.84rem; }
+.fail-col .si { color: rgba(255,255,255,0.14); }
+.win-col  .si { color: var(--green-light); }
+
+/* ── TESTIMONIALS ─────────────────────────────────── */
+.testi-section { background: var(--ghost); padding: 100px 0; }
+.testi-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 20px; margin: 52px 0;
+}
+.testi-card {
+  background: var(--white); border: 1px solid var(--border); padding: 40px 36px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.testi-card:hover { border-color: var(--green-light); transform: translateY(-3px); }
+.testi-qmark {
+  font-family: 'Playfair Display', serif; font-size: 3.2rem;
+  font-weight: 800; color: var(--green-light); line-height: 0.8;
+  display: block; margin-bottom: 12px;
+}
+.testi-stars { color: #c9930a; font-size: 0.79rem; letter-spacing: 2px; margin-bottom: 12px; }
+.testi-result {
+  background: var(--green-pale); border-left: 3px solid var(--green-light);
+  padding: 10px 16px; font-size: 0.79rem; font-weight: 600;
+  color: var(--green); margin-bottom: 20px;
+}
+.testi-card blockquote {
+  font-size: 0.93rem; font-weight: 300; font-style: italic;
+  color: var(--coal-soft); line-height: 1.78; margin-bottom: 20px;
+}
+.testi-byline {
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 18px; border-top: 1px solid var(--border);
+}
+.testi-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--green);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 0.94rem;
+  font-weight: 700; color: var(--green-light); flex-shrink: 0;
+}
+.testi-name { font-size: 0.82rem; font-weight: 600; color: var(--coal); }
+.testi-biz  { font-size: 0.74rem; font-weight: 300; color: var(--muted); }
+
+/* ── FINAL CTA ────────────────────────────────────── */
+.final-cta {
+  background: var(--green); padding: 120px 64px;
+  text-align: center; position: relative; overflow: hidden;
+}
+.final-cta::before {
+  content: '$'; position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Playfair Display', serif; font-size: 62vw;
+  font-weight: 800; color: rgba(170,231,142,0.028);
+  line-height: 1; pointer-events: none; user-select: none;
+}
+.final-cta-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+.final-cta-h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4.2vw, 3.8rem);
+  font-weight: 800; color: var(--white); line-height: 1.1;
+  letter-spacing: -0.01em; margin-bottom: 18px;
+}
+.final-cta-h2 em { font-style: italic; color: var(--green-light); }
+.final-cta-body {
+  font-size: 1rem; font-weight: 300;
+  color: rgba(255,255,255,0.5); line-height: 1.8;
+  max-width: 560px; margin: 0 auto 18px;
+}
+.final-cta-vision {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 1.1rem; font-weight: 600;
+  color: var(--green-light); line-height: 1.65; margin-bottom: 44px;
+}
+.risk-reversal {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 24px; margin-top: 28px; padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.risk-item {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.77rem; font-weight: 400; color: rgba(255,255,255,0.34);
+}
+.risk-check { color: var(--green-light); font-size: 0.82rem; }
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer { background: var(--green-deep); padding: 52px 64px; }
+.footer-top {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 24px;
+  padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,0.055); margin-bottom: 20px;
+}
+.footer-links { display: flex; gap: 28px; flex-wrap: wrap; list-style: none; }
+.footer-links a {
+  font-size: 0.79rem; font-weight: 400; color: rgba(255,255,255,0.32);
+  text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--green-light); }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-copy    { font-size: 0.72rem; color: rgba(255,255,255,0.17); }
+.footer-tagline {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 0.79rem; color: rgba(170,231,142,0.32);
+}
+
+/* ── ANIMATIONS ───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-left > * { animation: fadeUp 0.65s ease both; }
+.hero-left > :nth-child(1) { animation-delay: 0.08s; }
+.hero-left > :nth-child(2) { animation-delay: 0.16s; }
+.hero-left > :nth-child(3) { animation-delay: 0.24s; }
+.hero-left > :nth-child(4) { animation-delay: 0.32s; }
+.hero-left > :nth-child(5) { animation-delay: 0.40s; }
+.hero-panel { animation: fadeUp 0.65s 0.26s ease both; }
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 1024px) {
+  .wrap { padding: 0 36px; }
+  .site-nav { padding: 0 36px; }
+  .hero { padding: 130px 36px 80px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 44px; }
+  .hero-dollar { display: none; }
+  .awareness-grid { grid-template-columns: 1fr; }
+  .desire-inner { grid-template-columns: 1fr; gap: 44px; }
+  .mechanism-grid { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; gap: 32px; }
+  .step-arrow { display: none; }
+  .stakes-grid { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: 1fr; }
+  .final-cta { padding: 90px 36px; }
+  footer { padding: 44px 36px; }
+}
+@media (max-width: 640px) {
+  .topbar { flex-direction: column; text-align: center; }
+  .hero-h1 { font-size: 2.3rem; }
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .risk-reversal { gap: 16px; }
+  .footer-top { flex-direction: column; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══ TOPBAR ══════════════════════════════════════════════ -->
+<div class="topbar">
+  <p class="topbar-msg">
+    <strong>Arthur The Marketer</strong> — South Florida's local business marketing specialist. Results in as little as 1 week.
+  </p>
+  <a href="tel:+15619936734" class="btn btn-lime" style="font-size:0.75rem;padding:9px 20px;">📞 Free Strategy Call</a>
+</div>
+
+<!-- ══ HERO ════════════════════════════════════════════════
+  Schwartz Awareness: Solution Aware + Skeptical
+  They know marketing exists. They've tried it. They got burned.
+  Headline meets them at that exact moment of frustration.
+  Sophistication Stage 4: Stop claiming — identify and show mechanism.
+══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <nav class="site-nav">
+    <div class="logo">
+      <div class="logo-mark">Atm</div>
+      <span class="logo-sub">Arthur The Marketer</span>
+    </div>
+    <a href="mailto:Arthur@Arthurthemarketer.com" class="nav-link">Get Free Growth Tips →</a>
+  </nav>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-line"></span>
+        South Florida Local Business Marketing
+      </div>
+
+      <h1 class="hero-h1">
+        Your Competitor Is<br>
+        Getting Your Customers.<br>
+        <em>That Ends This Week.</em>
+      </h1>
+
+      <div class="hero-mechanism">
+        <span class="mechanism-dot"></span>
+        The ATM Local Dominance System™ — Google Ads · SEO · Brand Authority
+      </div>
+
+      <p class="hero-promise">
+        If you've tried Google Ads, SEO, or paid a marketing agency and seen little to show for it — 
+        you don't have a business problem. You have a system problem. 
+        Arthur The Marketer fixes the system. Most clients see results within 7 days.
+      </p>
+
+      <div class="cta-row">
+        <a href="tel:+15619936734" class="btn btn-lime">📞 Book a Free Strategy Call</a>
+        <a href="mailto:Arthur@Arthurthemarketer.com" class="link-text light">Get a free audit of your current marketing</a>
+      </div>
+
+      <div class="hero-proof">
+        <div class="proof-item"><span class="proof-dot"></span>Local Business Specialists Only</div>
+        <div class="proof-item"><span class="proof-dot"></span>No Long-Term Contracts</div>
+        <div class="proof-item"><span class="proof-dot"></span>Transparent Reporting</div>
+        <div class="proof-item"><span class="proof-dot"></span>Results in as Little as 1 Week</div>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <div class="panel-label">What ATM Clients Typically See</div>
+      <div class="stat-grid">
+        <div class="stat-cell"><div class="stat-num">5×</div><div class="stat-desc">More qualified<br>leads per month</div></div>
+        <div class="stat-cell"><div class="stat-num">90%</div><div class="stat-desc">Lower cost<br>per lead</div></div>
+        <div class="stat-cell"><div class="stat-num">1 Wk</div><div class="stat-desc">To see your<br>first results</div></div>
+        <div class="stat-cell"><div class="stat-num">100%</div><div class="stat-desc">Local market<br>focused</div></div>
+      </div>
+      <div class="panel-quote">"Your investment, our expertise —<br>your path to success."</div>
+    </div>
+  </div>
+  <div class="hero-dollar">$</div>
+</section>
+
+<!-- ══ AWARENESS ═══════════════════════════════════════════
+  Schwartz: Call out the prospect at their current state.
+  Name exactly who this page is for — especially the skeptic
+  who has been burned before. They feel seen; they keep reading.
+══════════════════════════════════════════════════════════ -->
+<section class="awareness-section">
+  <div class="wrap">
+    <div class="eyebrow eyebrow-light">Who This Is For</div>
+    <h2 class="section-h2 on-dark">Before You Read Another Word —<br>Is This Written For You?</h2>
+    <div class="awareness-grid">
+      <div class="awareness-card dim">
+        <span class="awareness-tag tag-dim">Just Getting Started</span>
+        <div class="awareness-card-num">01</div>
+        <h3>You've Never Run Ads or SEO Before</h3>
+        <p>You know you need marketing but haven't started yet. We'll build the foundation correctly from day one so you don't waste money figuring it out the hard way.</p>
+      </div>
+      <div class="awareness-card active">
+        <span class="awareness-tag tag-active">← This One Is Probably You</span>
+        <div class="awareness-card-num" style="color:rgba(170,231,142,0.12)">02</div>
+        <h3>You've Tried Marketing Before and Got Burned</h3>
+        <p>You paid an agency. Ran some ads. Maybe tried Fiverr. You spent the money and got nothing back. You're skeptical — and you should be. The ATM system was built specifically to fix what failed you before. Keep reading.</p>
+      </div>
+      <div class="awareness-card dim">
+        <span class="awareness-tag tag-dim">Already Running Campaigns</span>
+        <div class="awareness-card-num">03</div>
+        <h3>Your Ads Are Running But Not Performing</h3>
+        <p>Money is going out, but the leads aren't coming in — or they're the wrong quality. We audit your setup, fix what's broken, and turn your existing spend into the pipeline it should already be producing.</p>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a href="tel:+15619936734" class="btn btn-lime">📞 Book a Free Strategy Call</a>
+      <a href="mailto:Arthur@Arthurthemarketer.com" class="link-text light">Send us your current campaigns for a free audit</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MASS DESIRE ═════════════════════════════════════════
+  Schwartz: Don't sell "leads." Channel the DEEP desire.
+  The real desire: control, security, respect, freedom.
+  "More leads" is the vehicle. This section sells the destination.
+  Empathy bridge comes BEFORE any authority or pitch.
+══════════════════════════════════════════════════════════ -->
+<section class="desire-section">
+  <div class="wrap">
+    <div class="desire-inner">
+      <div class="desire-visual">
+        <div class="desire-visual-label">What You Actually Want</div>
+        <div class="desire-item">
+          <div class="desire-dot"></div>
+          <div>
+            <strong>To Stop Lying Awake Wondering Where Next Month's Jobs Are Coming From</strong>
+            <span>A full, predictable pipeline means security. Knowing your calendar fills itself every week is freedom.</span>
+          </div>
+        </div>
+        <div class="desire-item">
+          <div class="desire-dot"></div>
+          <div>
+            <strong>To Be the Obvious Choice in Your Market — Not Just an Option</strong>
+            <span>When customers in your area search, they should find you first. Every time. Without exception.</span>
+          </div>
+        </div>
+        <div class="desire-item">
+          <div class="desire-dot"></div>
+          <div>
+            <strong>To Get Back to Running Your Business Instead of Chasing It</strong>
+            <span>Marketing that generates leads in the background while you serve clients — that's what a real system does.</span>
+          </div>
+        </div>
+        <div class="desire-item">
+          <div class="desire-dot"></div>
+          <div>
+            <strong>To Know Your Marketing Budget Is Working — Not Just Disappearing</strong>
+            <span>Clear reporting. Real numbers. No confusion about what's producing results and what isn't.</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow eyebrow-green">Arthur The Marketer</div>
+        <h2 class="section-h2 on-light">You Didn't Build Your Business<br>to Live in Fear of Next Month.</h2>
+        <div class="desire-empathy">
+          "You're great at what you do. The frustrating part is that being great at your craft 
+          doesn't automatically fill your calendar anymore. There's a game being played online — 
+          and most local businesses are losing it without even knowing the rules."
+        </div>
+        <p class="desire-body">
+          The business owners winning locally right now aren't necessarily better than you. 
+          They have a better marketing system. Arthur The Marketer gives you that system — 
+          built specifically for South Florida local businesses, tuned to your market, 
+          and managed by someone who picks up when you call.
+        </p>
+        <div class="cta-row">
+          <a href="tel:+15619936734" class="btn btn-forest">📞 Book a Free 30-Min Call</a>
+          <a href="mailto:Arthur@Arthurthemarketer.com" class="link-text dark">Get a free audit instead</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE MECHANISM ═══════════════════════════════════════
+  Schwartz Stage 3/4: Claims don't convert skeptics.
+  The MECHANISM does. Name your system. Explain HOW each
+  piece works and what specific result it produces.
+  A named, explained mechanism is credible. A promise alone is not.
+══════════════════════════════════════════════════════════ -->
+<section class="mechanism-section">
+  <div class="wrap">
+    <div class="mechanism-intro">
+      <div class="eyebrow eyebrow-green">The Mechanism</div>
+      <h2 class="section-h2 on-light">Why the ATM Local Dominance System™ Actually Works</h2>
+      <p class="body-copy light">
+        Anyone can promise more leads. What makes the difference is having a system with specific 
+        components that work together. Here's exactly what we build for you — and why each part matters.
+      </p>
+    </div>
+
+    <div class="mechanism-badge">⚙ The ATM Local Dominance System™</div>
+
+    <div class="mechanism-grid">
+      <div class="mechanism-card">
+        <div class="mechanism-step">01</div>
+        <h3>Precision Paid Traffic</h3>
+        <div class="how-label">How It Works</div>
+        <p>We build hyper-local Google and Meta campaigns targeting the exact zip codes, search 
+        terms, and buyer profiles of your ideal customer — then cut everything that doesn't convert 
+        within the first week. Your budget only reaches people actively looking to buy what you sell, 
+        right now, in your area. No broad targeting. No wasted impressions.</p>
+        <span class="mechanism-result">→ Result: Qualified leads in as little as 7 days, 90% lower cost per lead</span>
+      </div>
+
+      <div class="mechanism-card">
+        <div class="mechanism-step">02</div>
+        <h3>Local Search Domination</h3>
+        <div class="how-label">How It Works</div>
+        <p>We build your organic presence around the specific searches your customers make when they 
+        need what you offer in your city — Google Business Profile, local keyword optimization, and 
+        content that signals authority to Google's ranking algorithm. Paid ads stop working the moment 
+        you stop paying. SEO compounds and keeps working indefinitely.</p>
+        <span class="mechanism-result">→ Result: Page-one visibility that grows and compounds over time</span>
+      </div>
+
+      <div class="mechanism-card">
+        <div class="mechanism-step">03</div>
+        <h3>Brand Authority Layer</h3>
+        <div class="how-label">How It Works</div>
+        <p>Traffic and rankings mean nothing if your brand doesn't convert the visitor into a call. 
+        We build the trust layer — your messaging, visual identity, and local positioning — so that 
+        when someone finds you, they see you as the obvious, credible choice immediately. A business 
+        with strong brand authority converts 3× more visitors into leads at the same traffic level.</p>
+        <span class="mechanism-result">→ Result: Higher conversion rates, more calls from the same traffic</span>
+      </div>
+    </div>
+
+    <div class="cta-row">
+      <a href="tel:+15619936734" class="btn btn-forest">📞 Get the System Working For You</a>
+      <a href="mailto:Arthur@Arthurthemarketer.com" class="link-text dark">Request a free audit of your current setup</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE PLAN ═════════════════════════════════════════════
+  StoryBrand: 3 simple steps removes confusion and fear.
+  Schwartz: Each step reduces perceived risk.
+══════════════════════════════════════════════════════════ -->
+<section class="plan-section">
+  <div class="wrap">
+    <div class="plan-header">
+      <div class="eyebrow eyebrow-green eyebrow-center">A Clear Path Forward</div>
+      <h2 class="section-h2 on-light">Getting Started Is Simpler Than You Think.</h2>
+      <p class="body-copy light">No lengthy onboarding. No lock-in contracts. Just three steps to a business that markets itself.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-ring">1</div>
+        <h3>Book a Free Strategy Call</h3>
+        <p>We talk about your business, your market, and where leads are slipping away. You leave with clarity — even if you don't hire us. No pitch, no pressure.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-ring">2</div>
+        <h3>We Build Your Custom Growth Plan</h3>
+        <p>Arthur builds the right combination of paid ads, SEO, and brand strategy for your specific business, budget, and local market. No templates. No guesswork.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-ring">3</div>
+        <h3>Your Phone Starts Ringing</h3>
+        <p>The ATM Local Dominance System launches and qualified local customers start finding you — typically within the first 7 days — while you focus on what you do best.</p>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a href="tel:+15619936734" class="btn btn-forest">📞 Start With Step 1 — It's Free</a>
+      <p class="risk-note light" style="text-align:center;">No obligation. You leave with real clarity even if you don't hire us.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STAKES ═══════════════════════════════════════════════
+  StoryBrand + Schwartz: Show failure AND success.
+  Use the prospect's specific, lived fears — not generic ones.
+  The success column should make them feel what winning looks like.
+══════════════════════════════════════════════════════════ -->
+<section class="stakes-section">
+  <div class="wrap">
+    <div class="stakes-intro">
+      <div class="eyebrow eyebrow-light eyebrow-center">What Happens Next Is Up to You</div>
+      <h2 class="section-h2 on-dark">Two Very Different Directions.</h2>
+      <p class="body-copy dark" style="margin:0 auto;">The path you're on right now leads somewhere specific. So does working with Arthur. They don't end up in the same place.</p>
+    </div>
+    <div class="stakes-grid">
+      <div class="stakes-col fail-col">
+        <div class="stakes-col-title">If Nothing Changes</div>
+        <div class="stakes-sub">Where most local businesses end up</div>
+        <ul class="stakes-list">
+          <li><span class="si">✗</span> You keep watching competitors rank above you for searches your customers are making right now</li>
+          <li><span class="si">✗</span> Your ad budget drains every month with no clear evidence it's doing anything useful</li>
+          <li><span class="si">✗</span> Revenue stays unpredictable — some months you're overwhelmed, others you're scrambling</li>
+          <li><span class="si">✗</span> You spend evenings worrying about next month's pipeline instead of resting</li>
+          <li><span class="si">✗</span> You try one more tactic, nothing sticks, and your confidence in marketing erodes further</li>
+          <li><span class="si">✗</span> Your growth is permanently capped by whoever happens to hear about you</li>
+        </ul>
+      </div>
+      <div class="stakes-col win-col">
+        <div class="stakes-col-title">With the ATM System</div>
+        <div class="stakes-sub">What your business looks like in as little as 1 week</div>
+        <ul class="stakes-list">
+          <li><span class="si">✓</span> Qualified local leads arriving consistently — your calendar fills before the week starts</li>
+          <li><span class="si">✓</span> You appear at the top of Google every time your ideal customer searches in your area</li>
+          <li><span class="si">✓</span> Revenue you can forecast, plan around, and confidently invest back into growth</li>
+          <li><span class="si">✓</span> You focus entirely on serving clients — the system generates leads in the background</li>
+          <li><span class="si">✓</span> A brand that makes you the obvious, trusted choice before anyone even picks up the phone</li>
+          <li><span class="si">✓</span> A business with a ceiling determined only by your ambition — not your visibility</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <a href="tel:+15619936734" class="btn btn-lime">📞 I Want the Second Column — Free Call</a>
+      <p class="risk-note dark" style="text-align:center;">No contracts. No pressure. Just a conversation about what's possible.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ═════════════════════════════════════════
+  Schwartz: Specific results are more believable than general praise.
+  Every testimonial surfaces a concrete, measurable outcome.
+  The prospect thinks: "If it worked for them, it can work for me."
+══════════════════════════════════════════════════════════ -->
+<section class="testi-section">
+  <div class="wrap">
+    <div class="eyebrow eyebrow-green">Social Proof</div>
+    <h2 class="section-h2 on-light">Local Business Owners<br>Who Made the Call.</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <span class="testi-qmark">"</span>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-result">📈 Lead volume tripled within 60 days</div>
+        <blockquote>Before Arthur I was paying for ads and getting nothing back. He didn't just fix the ads — he showed me exactly why they weren't working. That transparency alone was worth the call. The leads were just a bonus.</blockquote>
+        <div class="testi-byline">
+          <div class="testi-avatar">M</div>
+          <div><div class="testi-name">Maria S.</div><div class="testi-biz">HVAC Business Owner · South Florida</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-qmark">"</span>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-result">📈 Page one for every primary keyword in 90 days</div>
+        <blockquote>Arthur rebuilt our brand and our SEO from the ground up. I was skeptical about SEO but the results are undeniable. My phone rings every day with customers who are already sold before they call. Worth every penny.</blockquote>
+        <div class="testi-byline">
+          <div class="testi-avatar">D</div>
+          <div><div class="testi-name">David R.</div><div class="testi-biz">Plumbing Company Owner</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-qmark">"</span>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-result">📈 Revenue up 40% year over year</div>
+        <blockquote>I'd been burned twice by agencies before. I almost didn't make the call. Arthur showed me exactly where every dollar was going — no smoke, no mirrors. That trust was built in the first conversation. The revenue growth confirmed everything.</blockquote>
+        <div class="testi-byline">
+          <div class="testi-avatar">L</div>
+          <div><div class="testi-name">Lisa T.</div><div class="testi-biz">Boutique Retail Owner</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <span class="testi-qmark">"</span>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-result">📈 Cost per lead dropped 85% in the first month</div>
+        <blockquote>What makes Arthur genuinely different is that he answers when you call. No account managers, no three-day wait for a response. He's a real partner. Our cost per lead dropped dramatically and has kept going down ever since.</blockquote>
+        <div class="testi-byline">
+          <div class="testi-avatar">J</div>
+          <div><div class="testi-name">James K.</div><div class="testi-biz">Auto Detailing Shop Owner</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a href="tel:+15619936734" class="btn btn-forest">📞 I'm Ready — Book My Free Call</a>
+      <a href="mailto:Arthur@Arthurthemarketer.com" class="link-text dark">Get a free audit of your current marketing first</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FINAL CTA ════════════════════════════════════════════
+  Schwartz: At this point, don't re-introduce. INTENSIFY.
+  The prospect has read everything. They're close.
+  Remind them of the deep desire one final time.
+  Make the cost of inaction feel real and immediate.
+  Then remove every remaining reason to say no.
+══════════════════════════════════════════════════════════ -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <div class="eyebrow eyebrow-light eyebrow-center" style="margin-bottom:20px;">This Is Your Move</div>
+
+    <h2 class="final-cta-h2">
+      Right Now, Someone in Your Area<br>Is Searching for What You Offer.<br>
+      <em>They're Going to Find Someone.</em>
+    </h2>
+
+    <p class="final-cta-body">
+      That someone could be you. Or it could be the competitor who's been showing up in your market 
+      while you've been working harder and seeing less return. One free conversation with Arthur 
+      is the difference between those two outcomes.
+    </p>
+
+    <p class="final-cta-vision">
+      Imagine your calendar full on Monday morning.<br>
+      Imagine knowing exactly where next month's revenue is coming from.<br>
+      Imagine marketing that generates leads while you sleep.<br>
+      That's what the ATM Local Dominance System builds for you.
+    </p>
+
+    <div class="cta-row center" style="margin-bottom:16px;">
+      <a href="tel:+15619936734" class="btn btn-lime" style="font-size:0.9rem;padding:20px 44px;">📞 Book a Free Strategy Call</a>
+      <a href="mailto:Arthur@Arthurthemarketer.com" class="btn btn-ghost-white" style="padding:19px 38px;">Get a Free Marketing Audit</a>
+    </div>
+
+    <div class="risk-reversal">
+      <div class="risk-item"><span class="risk-check">✓</span> Free 30-minute strategy call</div>
+      <div class="risk-item"><span class="risk-check">✓</span> No obligation or pressure</div>
+      <div class="risk-item"><span class="risk-check">✓</span> No long-term contracts required</div>
+      <div class="risk-item"><span class="risk-check">✓</span> You keep everything we build</div>
+      <div class="risk-item"><span class="risk-check">✓</span> Proudly serving South Florida</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═══════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="logo">
+      <div class="logo-mark" style="font-size:1.55rem;">Atm</div>
+      <span class="logo-sub">Arthur The Marketer</span>
+    </div>
+    <ul class="footer-links">
+      <li><a href="tel:+15619936734">(561) 993-6734</a></li>
+      <li><a href="mailto:Arthur@Arthurthemarketer.com">Arthur@Arthurthemarketer.com</a></li>
+      <li><a href="tel:+15619936734">Book a Free Call</a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Arthur The Marketer. All rights reserved.</p>
+    <p class="footer-tagline">"Your path to success."</p>
+  </div>
+</footer>
+
+</body>
+</html>
